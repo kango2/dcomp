@@ -26,8 +26,22 @@ zcat GCF_000002295.2_MonDom5_genomic.gtf.gz | perl -lne 'if ($_=~ /gene_id \"\";
 zcat GCF_004115215.1_mOrnAna1.p.v1_genomic.gtf.gz | perl -lne 'if ($_=~ /gene_id \"\";.*product \"(.*?)\"/){ $c++; $gid = "$1"; $_ =~ s/gene_id \"\";/gene_id \"$gid\";/; print $_} else{ print $_ }' | gzip >GCF_004115215.1_mOrnAna1.p.v1_genomic.mod.gtf.gz
 ```
 
-Genomes were indexed for read alignments. 
+Genomes were indexed for read alignments. We chose parameters to create full index as a single block.
 ```
 subread-buildindex -F -B -o reference_genome.fna reference_genome.fna.gz
 ```
- 
+
+## Read alignments
+
+RNAseq reads were aligned against the species and **sex** specific reference genomes using the following command. Parameters were chosen such that (a) all possible subreads were chosen for mapping (`-n 300`) and (b) for multi-mapping reads, one random location was chosen for read assignments (`--multiMapping -B 1`). 
+
+```
+# Single-end format
+subread-align -n 300 --multiMapping -B 1 -T 24 --rg-id [rgid] -a [XXX_genomic.gtf.gz] --sortReadsByCoordinates -i [XXX_genomic.fna] -r [inputreads.fq.gz] -t 0 -o [output.bam]
+# Paired-end format
+subread-align -n 300 --multiMapping -B 1 -T 24 --rg-id [rgid] -a [XXX_genomic.gtf.gz] --sortReadsByCoordinates -i [XXX_genomic.fna] -r [inputreads.R1.fq.gz] -R [inputreads.R2.fq.gz] -t 0 -o [output.bam]
+
+```
+
+
+
