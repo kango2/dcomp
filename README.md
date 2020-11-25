@@ -1,10 +1,15 @@
 # dcomp
 Sex chromosome dosage compensation across vertebrates
 
-## External software used
+## Software versions
 
-1. [Subread package](http://subread.sourceforge.net) for RNAseq read alignments (version 2.0.1).
-2. 
+1. Ubuntu 18.04.4 LTS (Bionic Beaver)
+2. R version 3.6.3 (2020-02-29)
+3. Perl v5.26.1
+2. [Subread package](http://subread.sourceforge.net) for RNAseq read alignments (version 2.0.1).
+4. [edgeR](https://bioconductor.org/packages/release/bioc/html/edgeR.html) for count data processing (version 3.28.1)
+5. [tidyverse](https://www.tidyverse.org) for data cleanup and manipulation (version 1.3.0)
+
 
 ## Reference genomes and annotations
 1. Chicken: GCF_000002315.6_GRCg6a_genomic.fna.gz, GCF_000002315.6_GRCg6a_genomic.gtf.gz
@@ -52,4 +57,8 @@ featureCounts --byReadGroup -p -O -M -s 2 -a [XXX_genomic.gtf.gz] -o [outputcoun
 ```
 
 Strand parameter was `-s 2` for chicken and mouse samples, `-s 1` for opossum samples and `-s 0` for platypus samples.
+
+## Counts data clean-up and processing
+
+Counts data were processed to obtain normalised counts, merge specific metadata, counts, gene information using [dcanalysis.R](https://github.com/kango2/dcomp/blob/main/dcanalysis.R).
 
