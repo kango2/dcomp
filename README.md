@@ -51,3 +51,5 @@ Features count was performed using the following command. Multiple files for a g
 featureCounts --byReadGroup -p -O -M -s 2 -a [XXX_genomic.gtf.gz] -o [outputcounts.txt] [Species-*.bam]
 ```
 
+Strand parameter was `-s 2` for chicken and mouse samples, `-s 1` for opossum samples and `-s 0` for platypus samples.
+
