@@ -43,5 +43,11 @@ subread-align -n 300 --multiMapping -B 1 -T 24 --rg-id [rgid] -a [XXX_genomic.gt
 
 ```
 
+## Feature counts
 
+Features count was performed using the following command. Multiple files for a given species were processed simultaneously. Parameters were chosen such that (a) reads were assigned to all overlapping features if features were ovelapping (`-O`), (b) multi-mapping reads were counted (`-M`), and (c) strand-specificity of RNAseq was accounted for counting (`-s 0,1, or 2`). For paired-end data, fragments were counted instead of individual reads of a pair (`-p`).
+
+```
+featureCounts --byReadGroup -p -O -M -s 2 -a [XXX_genomic.gtf.gz] -o [outputcounts.txt] [Species-*.bam]
+```
 
