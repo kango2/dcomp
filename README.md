@@ -62,3 +62,15 @@ Strand parameter was `-s 2` for chicken and mouse samples, `-s 1` for opossum sa
 
 Counts data were processed to obtain normalised counts, merge specific metadata, counts, gene information using [dcanalysis.R](https://github.com/kango2/dcomp/blob/main/dcanalysis.R).
 
+## Platypus PAR definitions
+
+| chr   | par | start | end |
+|:---:|:---:|---:|----:| 
+| chrX1	| PAR1 | 1 | 45000000 |
+| chrX2 | PAR1 | 1 | 5500000 |
+| chrX2 | PAR2 | 20000000 | 29662106 |
+| chrX3 | PAR1 | 1 | 18500000 |
+| chrX3 | PAR2 | 31500000 | 33863336 |
+| chrX4 | PAR1 | 1 | 5500000 |
+| chrX5 | PAR1 | 1 | 8500000 |
+| chrX5 | PAR2 | 69000000 | 70139320 |
