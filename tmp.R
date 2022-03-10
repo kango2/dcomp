@@ -30,3 +30,25 @@ geom_segment(data = medians, mapping = aes(x = x_start, xend = x_end, y = log(me
 facet_wrap(~chr,ncol=2, scales = "free_x") + theme_bw() + 
 theme(text = element_text(size=20)) 
 
+give.n <- function(x){
+  return(c(y = median(x)*1.05, label = length(x))) 
+  # experiment with the multiplier to find the perfect position
+}
+
+
+##for boxplots
+autosomes <- paste("chr", c(1:21),sep="")
+
+bind_rows(rna %>% mutate(rFib = fibroblastM/fibroblastF, rHea = heartM/heartF, rLiv = liverM / liverF) %>%
+select(chr,geneid, start,ratio=rFib) %>% mutate(type = "RNA"),
+select(prot, geneid, chr, start = pstart, ratio = pFib) %>% mutate(type = "Protein")) %>% filter(chr %in% c(autosomes, "chrX1", "chrX5")) %>%
+mutate(ctype = case_when(chr == "chrX1" & start < 45000000 ~ "chrX1-PAR1",
+                         chr == "chrX5" & start < 8500000 ~ "chrX5-PAR1", 
+                         chr %in% autosomes ~ "autosome", TRUE ~ chr)) %>%
+filter(!is.na(ratio)) %>%
+group_by(chr,geneid) %>% mutate(count = n(), class = case_when(type == "RNA" & count == 2 ~ "Subset RNA", TRUE ~ type)) %>% 
+ggplot(aes(x=ctype,y=log(ratio,2),fill = factor(class, levels = c("RNA","Subset RNA","Protein")))) + 
+geom_boxplot(notch = T, outlier.shape = NA) +
+stat_summary(fun.data = give.n, geom = "text", hjust=0.5, vjust=2, position = position_dodge(width = 0.75)) + 
+theme_bw() + theme(text = element_text(size=20)) + coord_cartesian(ylim = c(-2, 2)) + xlim(c("autosome","chrX1-PAR1","chrX1","chrX5-PAR1","chrX5")) +
+labs(fill="")
