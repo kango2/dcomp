@@ -1,3 +1,4 @@
+library(tidyverse)
 
 rna <- read_delim("/g/data/xl04/pw8697/OAN/oan.normalised.counts.txt", delim = "\t")
 tissues <- c("Fib","Hea","Liv")
