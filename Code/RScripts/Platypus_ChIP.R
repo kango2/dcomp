@@ -36,11 +36,6 @@ Usable_H4K20me1$Modification <- "H4K20me1"
 
 #
 
-#####GERMAN BELOW
-
-##Set working directory
-setwd("/Users/ashleymilton/OneDrive - UNSW/2021 PhD/Platypus ChIP/macs2_German/")
-
 
 ##Loading the data
 #Loading H3K4me3 (female) data
@@ -171,7 +166,7 @@ Platypus_ChIP[Platypus_ChIP$Sample == 'Female', "Log2_adjusted_fold_change"] <- 
 
 ##Adding GFF
 library(readr)
-genes <- read_delim("~/Desktop/ChIP data local/Platypus_Genome/GCF_004115215.2_mOrnAna1.pri.v4_genomic.gff", 
+genes <- read_delim("GCF_004115215.2_mOrnAna1.pri.v4_genomic.gff", 
                     "\t", escape_double = FALSE, col_names = FALSE, 
                     trim_ws = TRUE, skip = 8)
 
@@ -198,7 +193,7 @@ LISTOFCHROMOSOMES <- c("NC_041728.1", "NC_041729.1", "NC_041730.1", "NC_041731.1
 i <- "NC_041753.1"
 
 
-chrom_sizes <- read_csv("/Users/ashleymilton/Desktop/ChIP data local/BigWig/ornAna1_chrom_sizes_NCBInames.csv", col_names = TRUE)
+chrom_sizes <- read_csv("ornAna1_chrom_sizes_NCBInames.csv", col_names = TRUE)
 colnames(chrom_sizes) <- c("Chromosome", "Chr_Length")
 Platypus_ChIP2 <- Platypus_ChIP %>% right_join(chrom_sizes, by=c("Chromosome"))
   
@@ -219,7 +214,7 @@ for(i in LISTOFCHROMOSOMES){
     theme(panel.spacing.y = unit(-0.05, "cm")) +
     facet_wrap(~ Modification, ncol = 1, scales = "free_y")+
     geom_segment(data=genes_mod, aes(x=Start, xend=End, y=0, yend=0), colour="#6b6b6b", size=2)
-  ggsave(plot=plot, filename = paste('yaxis_log2_facetfree_',i,'_q0.05_germaninput_noaxes.jpg'), path = "/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/ChIP_seq/Figures/Ash_ChIP_jpgs_030622_For_paper", width = 18, height = 6, dpi = 300)
+  ggsave(plot=plot, filename = paste('yaxis_log2_facetfree_',i,'_q0.05_germaninput_noaxes.jpg'), path = "ChIP_jpgs_030622_For_paper", width = 18, height = 6, dpi = 300)
 }
 
 
