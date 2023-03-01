@@ -4,14 +4,14 @@
 #PBS -l select=1:ncpus=16:mem=100gb
 #PBS -l walltime=1:00:00
 #PBS -j oe
-#PBS -M a.milton@unsw.edu.au
+#PBS -M myemailadress@generic.com
 #PBS -m ae
  
 
 module load hicexplorer/3.4.3
 
-hicPlotMatrix --matrix /srv/scratch/z5160329/OAN_HiC_Ash/HiCCorrectMatrix_output/Matrix_corrected_males_500kb_bin_-1.5_3.h5 \
---outFileName /srv/scratch/z5160329/OAN_HiC_Ash/HiCPlotMatrix_output/Matrix_corrected_males_500kb_bin_-1.5_3_XsandYs2.png \
+hicPlotMatrix --matrix Matrix_corrected_males_500kb_bin_-1.5_3.h5 \
+--outFileName Matrix_corrected_males_500kb_bin_-1.5_3_XsandYs2.png \
 --chromosomeOrder X1 Y1 X2 Y2 X3 Y3 X4 Y4 X5 Y5 \
 --log1p \
 --dpi 300
