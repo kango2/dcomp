@@ -79,7 +79,7 @@ library(scales)
 
 
 #Saving male/female together X1
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_X1.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_X1.pdf", width=15, height=5)
 ggplot()+
   geom_smooth(method = "loess", span = 0.05, aes(x=Platypus_RRBS_F_X1$midpoint, y=Platypus_RRBS_F_X1$percent_coverage, colour="plum2", fill="plum2"))+
   geom_smooth(method = "loess", span = 0.05, aes(x=Platypus_RRBS_M_X1$midpoint, y=Platypus_RRBS_M_X1$percent_coverage, colour="cadetblue3", fill="cadetblue3"))+
@@ -98,7 +98,7 @@ dev.off()
 
 
 #Saving male/female together X2
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_X2.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_X2.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_X2$midpoint, y=GC_content_X2$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_X2$midpoint, y=GC_content_X2$gc*100, colour="gray30"))+
@@ -118,7 +118,7 @@ dev.off()
 
 
 #Saving male/female together X3
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_X3.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_X3.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_X3$midpoint, y=GC_content_X3$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_X3$midpoint, y=GC_content_X3$gc*100, colour="gray30"))+
@@ -137,7 +137,7 @@ dev.off()
 
 
 #Saving male/female together X4
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_X4.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_X4.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_X4$midpoint, y=GC_content_X4$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_X4$midpoint, y=GC_content_X4$gc*100, colour="gray30"))+
@@ -156,7 +156,7 @@ dev.off()
 
 
 #Saving male/female together X5
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_X5.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_X5.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_X5$midpoint, y=GC_content_X5$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_X5$midpoint, y=GC_content_X5$gc*100, colour="gray30"))+
@@ -174,7 +174,7 @@ dev.off()
 
 
 #Saving male/female together 1
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_1.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_1.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_1$midpoint, y=GC_content_1$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_1$midpoint, y=GC_content_1$gc*100, colour="gray30"))+
@@ -193,7 +193,7 @@ dev.off()
 
 
 #Saving male/female together 2
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_2.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_2.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_2$midpoint, y=GC_content_2$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_2$midpoint, y=GC_content_2$gc*100, colour="gray30"))+
@@ -210,7 +210,7 @@ dev.off()
 #
 
 #Saving male/female together 3
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_3.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_3.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_3$midpoint, y=GC_content_3$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_3$midpoint, y=GC_content_3$gc*100, colour="gray30"))+
@@ -227,7 +227,7 @@ dev.off()
 #
 
 #Saving male/female together 4
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_4.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_4.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_4$midpoint, y=GC_content_4$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_4$midpoint, y=GC_content_4$gc*100, colour="gray30"))+
@@ -244,7 +244,7 @@ dev.off()
 #
 
 #Saving male/female together 5
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_5.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_5.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_5$midpoint, y=GC_content_5$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_5$midpoint, y=GC_content_5$gc*100, colour="gray30"))+
@@ -263,7 +263,7 @@ dev.off()
 
 
 #Saving male/female together 6
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_6.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_6.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_6$midpoint, y=GC_content_6$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_6$midpoint, y=GC_content_6$gc*100, colour="gray30"))+
@@ -280,7 +280,7 @@ dev.off()
 #
 
 #Saving male/female together 7
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_7.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_7.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_7$midpoint, y=GC_content_7$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_7$midpoint, y=GC_content_7$gc*100, colour="gray30"))+
@@ -297,7 +297,7 @@ dev.off()
 #
 
 #Saving male/female together 8
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_8.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_8.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_8$midpoint, y=GC_content_8$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_8$midpoint, y=GC_content_8$gc*100, colour="gray30"))+
@@ -314,7 +314,7 @@ dev.off()
 #
 
 #Saving male/female together 9
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_9.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_9.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_9$midpoint, y=GC_content_9$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_9$midpoint, y=GC_content_9$gc*100, colour="gray30"))+
@@ -331,7 +331,7 @@ dev.off()
 #
 
 #Saving male/female together 10
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_10.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_10.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_10$midpoint, y=GC_content_10$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_10$midpoint, y=GC_content_10$gc*100, colour="gray30"))+
@@ -349,7 +349,7 @@ dev.off()
 
 
 #Saving male/female together 11
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_11.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_11.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_11$midpoint, y=GC_content_11$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_11$midpoint, y=GC_content_11$gc*100, colour="gray30"))+
@@ -366,7 +366,7 @@ dev.off()
 #
 
 #Saving male/female together 12
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_12.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_12.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_12$midpoint, y=GC_content_12$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_12$midpoint, y=GC_content_12$gc*100, colour="gray30"))+
@@ -383,7 +383,7 @@ dev.off()
 #
 
 #Saving male/female together 13
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_13.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_13.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_13$midpoint, y=GC_content_13$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_13$midpoint, y=GC_content_13$gc*100, colour="gray30"))+
@@ -400,7 +400,7 @@ dev.off()
 #
 
 #Saving male/female together 14
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_14.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_14.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_14$midpoint, y=GC_content_14$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_14$midpoint, y=GC_content_14$gc*100, colour="gray30"))+
@@ -417,7 +417,7 @@ dev.off()
 #
 
 #Saving male/female together 15
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_15.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_15.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_15$midpoint, y=GC_content_15$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_15$midpoint, y=GC_content_15$gc*100, colour="gray30"))+
@@ -434,7 +434,7 @@ dev.off()
 #
 
 #Saving male/female together 16
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_16.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_16.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_16$midpoint, y=GC_content_16$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_16$midpoint, y=GC_content_16$gc*100, colour="gray30"))+
@@ -451,7 +451,7 @@ dev.off()
 #
 
 #Saving male/female together 17
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_17.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_17.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_17$midpoint, y=GC_content_17$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_17$midpoint, y=GC_content_17$gc*100, colour="gray30"))+
@@ -469,7 +469,7 @@ dev.off()
 
 
 #Saving male/female together 19
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_19.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_19.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_19$midpoint, y=GC_content_19$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_19$midpoint, y=GC_content_19$gc*100, colour="gray30"))+
@@ -487,7 +487,7 @@ dev.off()
 
 
 #Saving male/female together 18
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_18.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_18.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_18$midpoint, y=GC_content_18$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_18$midpoint, y=GC_content_18$gc*100, colour="gray30"))+
@@ -504,7 +504,7 @@ dev.off()
 
 
 #Saving male/female together 20
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_20.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_20.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_20$midpoint, y=GC_content_20$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_20$midpoint, y=GC_content_20$gc*100, colour="gray30"))+
@@ -521,7 +521,7 @@ dev.off()
 
 
 #Saving male/female together 21 
-pdf(file="/Users/ashleymilton/Library/CloudStorage/OneDrive-SharedLibraries-UNSW/Paul Waters - DC_Paper/Science/Paper_Figures/RRBS/Figures/Ash_methylation_030622/OAN_meth_GC_MF_21.pdf", width=15, height=5)
+pdf(file="OAN_meth_GC_MF_21.pdf", width=15, height=5)
 ggplot()+
   geom_line(aes(x=GC_content_21$midpoint, y=GC_content_21$gc*100, colour="darkorange1"))+
   geom_smooth(method = "loess", span = 0.03, size=0.5, aes(x=GC_content_21$midpoint, y=GC_content_21$gc*100, colour="gray30"))+
