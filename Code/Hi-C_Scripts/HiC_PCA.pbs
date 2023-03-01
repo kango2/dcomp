@@ -1,0 +1,19 @@
+#!/bin/bash
+ 
+#PBS -N HiC_PCA
+#PBS -l select=1:ncpus=16:mem=126gb
+#PBS -l walltime=8:00:00
+#PBS -j oe
+#PBS -M a.milton@unsw.edu.au
+#PBS -m ae
+ 
+
+module load hicexplorer/3.4.3
+
+
+hicPCA -m /srv/scratch/z5160329/OAN_HiC_Ash/HiCCorrectMatrix_output/Matrix_corrected_males_500kb_bin_-1.5_3.h5 \
+--numberOfEigenvectors 1 \
+--format bedgraph \
+-o /srv/scratch/z5160329/OAN_HiC_Ash/HiCPCA_output/pca1_males_500kb_bin_H4K20me1.bedgraph \
+--extraTrack /srv/scratch/z5160329/OAN_HiC_Ash/BigWigs_for_HiC/Will/M_H4K20me1_peaks.bw \
+--histonMarkType active 

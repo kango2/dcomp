@@ -1,0 +1,41 @@
+#!/bin/bash
+ 
+#PBS -N HiC_BuildMatrix
+#PBS -l select=1:ncpus=16:mem=100gb
+#PBS -l walltime=6:00:00
+#PBS -j oe
+#PBS -M a.milton@unsw.edu.au
+#PBS -m ae
+ 
+
+cd /srv/scratch/z5160329/OAN_HiC_Ash/HiC_Subread_output/
+
+module load hicexplorer/3.4.3
+
+hicBuildMatrix --samFiles HiC_Platypus_5-1_male_forward.renamed.sam HiC_Platypus_5-1_male_reverse.renamed.sam \
+--outFileName /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-1_500kb_bin_renamed_h5 \
+--QCfolder /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/QC_folder_5-1_500kb_bin_renamed_subset \
+--binSize 500000 \
+--restrictionSequence GATC \
+--danglingSequence GATC
+
+hicBuildMatrix --samFiles HiC_Platypus_5-2_male_forward.renamed.sam HiC_Platypus_5-2_male_reverse.renamed.sam \
+--outFileName /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-2_500kb_bin_renamed_h5 \
+--QCfolder /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/QC_folder_5-2_500kb_bin_renamed_subset \
+--binSize 500000 \
+--restrictionSequence GATC \
+--danglingSequence GATC
+
+hicBuildMatrix --samFiles HiC_Platypus_5-3_male_forward.renamed.sam HiC_Platypus_5-3_male_reverse.renamed.sam \
+--outFileName /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-3_500kb_bin_renamed_h5 \
+--QCfolder /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/QC_folder_5-3_500kb_bin_renamed_subset \
+--binSize 500000 \
+--restrictionSequence GATC \
+--danglingSequence GATC
+
+hicBuildMatrix --samFiles HiC_Platypus_5-4_male_forward.renamed.sam HiC_Platypus_5-4_male_reverse.renamed.sam \
+--outFileName /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-4_500kb_bin_renamed_h5 \
+--QCfolder /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/QC_folder_5-4_500kb_bin_renamed_subset \
+--binSize 500000 \
+--restrictionSequence GATC \
+--danglingSequence GATC

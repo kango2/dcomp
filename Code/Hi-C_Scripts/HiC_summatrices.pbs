@@ -1,0 +1,17 @@
+#!/bin/bash
+ 
+#PBS -N HiC_SumMatrices
+#PBS -l select=1:ncpus=16:mem=100gb
+#PBS -l walltime=6:00:00
+#PBS -j oe
+#PBS -M a.milton@unsw.edu.au
+#PBS -m ae
+ 
+
+module load hicexplorer/3.4.3
+
+hicSumMatrices -m /srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-1_500kb_bin_renamed.h5 \
+/srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-2_500kb_bin_renamed.h5 \
+/srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-3_500kb_bin_renamed.h5 \
+/srv/scratch/z5160329/OAN_HiC_Ash/HiCBuildMatrix_output/Matrix_male_5-4_500kb_bin_renamed.h5 \
+--outFileName /srv/scratch/z5160329/OAN_HiC_Ash/HiCSumMatrices_output/Matrix_males_500kb_bin_renamed.h5
