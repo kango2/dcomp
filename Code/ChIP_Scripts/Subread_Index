@@ -10,4 +10,4 @@
 
 module load subread/2.0.1
 
-subread-buildindex -o /srv/scratch/waters/Genomes/Platypus/SubreadIndex/OrnAna1 /srv/scratch/waters/Genomes/Platypus/GCF_004115215.2_mOrnAna1.pri.v4_genomic.fa
+subread-buildindex -o OrnAna1 GCF_004115215.2_mOrnAna1.pri.v4_genomic.fa
