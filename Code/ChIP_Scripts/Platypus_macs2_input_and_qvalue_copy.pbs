@@ -4,7 +4,7 @@
 #PBS -l select=1:ncpus=8:mem=100gb
 #PBS -l walltime=8:00:00
 #PBS -j oe
-#PBS -M a.milton@unsw.edu.au
+#PBS -M myemailadress@generic.com
 #PBS -m ae
 
 cd $PBS_O_WORKDIR
@@ -15,118 +15,108 @@ module load python/2.7.15
 
 #F_H3K27me3
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/F_H3K27me3.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22950-1_Pool-9-318_S23_read.bam \
+-t F_H3K27me3.clean.subread.bam \
+-c mpimg_L22950-1_Pool-9-318_S23_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n F_H3K27me3 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #F_H3K9me2
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/F_H3K9me2.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22950-1_Pool-9-318_S23_read.bam \
+-t F_H3K9me2.clean.subread.bam \
+-c mpimg_L22950-1_Pool-9-318_S23_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n F_H3K9me2 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #F_H3K9me3
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/F_H3K9me3.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22950-1_Pool-9-318_S23_read.bam \
+-t F_H3K9me3.clean.subread.bam \
+-c German_data/mapping/mpimg_L22950-1_Pool-9-318_S23_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n F_H3K9me3 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #F_H4K20me1
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/F_H4K20me1.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22950-1_Pool-9-318_S23_read.bam \
+-t F_H4K20me1.clean.subread.bam \
+-c mpimg_L22950-1_Pool-9-318_S23_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n F_H4K20me1 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #F_RNA-polII
 # macs2 callpeak \
-# -t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/F_RNA-polII.clean.subread.bam \
-# -c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22950-1_Pool-9-318_S23_read.bam \
+# -t F_RNA-polII.clean.subread.bam \
+# -c mpimg_L22950-1_Pool-9-318_S23_read.bam \
 # -f BAM \
 # -g 1.8e9 \
 # -n F_RNA-polII \
 # -B \
-# --outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 # -q 0.05
 
 #M_H3K27me3
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/M_H3K27me3.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22956-1_Pool-6-378_S17_read.bam \
+-t M_H3K27me3.clean.subread.bam \
+-c mpimg_L22956-1_Pool-6-378_S17_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n M_H3K27me3 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #M_H3K9me2
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/M_H3K9me2.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22956-1_Pool-6-378_S17_read.bam \
+-t M_H3K9me2.clean.subread.bam \
+-c mpimg_L22956-1_Pool-6-378_S17_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n M_H3K9me2 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #M_H3K9me3
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/M_H3K9me3.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22956-1_Pool-6-378_S17_read.bam \
+-t M_H3K9me3.clean.subread.bam \
+-c mpimg_L22956-1_Pool-6-378_S17_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n M_H3K9me3 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #M_H4K20me1
 macs2 callpeak \
--t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/M_H4K20me1.clean.subread.bam \
--c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22956-1_Pool-6-378_S17_read.bam \
+-t M_H4K20me1.clean.subread.bam \
+-c mpimg_L22956-1_Pool-6-378_S17_read.bam \
 -f BAM \
 -g 1.8e9 \
 -n M_H4K20me1 \
 -B \
 --broad \
---outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 -q 0.05
 
 #M_RNA-polII
 # macs2 callpeak \
-# -t /srv/scratch/z5160329/OAN_ChIP_Ash/Subread/M_RNA-polII.clean.subread.bam \
-# -c /srv/scratch/waters/OAN_ChIP/ChIP_data/German_data/mapping/mpimg_L22956-1_Pool-6-378_S17_read.bam \
+# -t M_RNA-polII.clean.subread.bam \
+# -c mpimg_L22956-1_Pool-6-378_S17_read.bam \
 # -f BAM \
 # -g 1.8e9 \
 # -n M_RNA-polII \
 # -B \
-# --outdir /srv/scratch/waters/OAN_ChIP/Ash_macs2_german_input_q0.05/ \
 # -q 0.05
