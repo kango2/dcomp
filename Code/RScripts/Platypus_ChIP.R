@@ -1,8 +1,3 @@
-##Set working directory
-setwd("/Users/ashleymilton/OneDrive - UNSW/2021 PhD/Platypus ChIP/macs2_Germaninput_qvalue0.05")
-
-#
-
 ##Loading the data
 
 ##Loading the data
