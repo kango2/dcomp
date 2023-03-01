@@ -4,15 +4,15 @@
 #PBS -l select=1:ncpus=16:mem=100gb
 #PBS -l walltime=2:00:00
 #PBS -j oe
-#PBS -M a.milton@unsw.edu.au
+#PBS -M myemailadress@generic.com
 #PBS -m ae
  
 
 module load hicexplorer/3.4.3
 
-hicCorrectMatrix diagnostic_plot --matrix /srv/scratch/z5160329/OAN_HiC_Ash/HiCSumMatrices_output/Matrix_males_500kb_bin_renamed.h5 \
--o /srv/scratch/z5160329/OAN_HiC_Ash/HiCCorrectMatrix_output/Diagnostic_plot_males_500kb_bin.png
+hicCorrectMatrix diagnostic_plot --matrix Matrix_males_500kb_bin_renamed.h5 \
+-o Diagnostic_plot_males_500kb_bin.png
 
-hicCorrectMatrix correct -m /srv/scratch/z5160329/OAN_HiC_Ash/HiCSumMatrices_output/Matrix_males_500kb_bin_renamed.h5 \
+hicCorrectMatrix correct -m Matrix_males_500kb_bin_renamed.h5 \
 --filterThreshold -1.5 3 \
--o /srv/scratch/z5160329/OAN_HiC_Ash/HiCCorrectMatrix_output/Matrix_corrected_males_500kb_bin_-1.5_3.h5
+-o Matrix_corrected_males_500kb_bin_-1.5_3.h5
