@@ -1,6 +1,3 @@
-##Set working directory
-setwd("/Users/ashleymilton/Desktop/ChIP data local/Platypus_methylation")
-
 #New male and female files
 
 Platypus_RRBS_M <- read.delim("PlatypusRRBS_MaleTiles_50kb.txt", header = TRUE)
