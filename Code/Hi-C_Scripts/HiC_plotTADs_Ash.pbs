@@ -4,7 +4,7 @@
 #PBS -l select=1:ncpus=16:mem=30gb
 #PBS -l walltime=1:00:00
 #PBS -j oe
-#PBS -M a.milton@unsw.edu.au
+#PBS -M myemailadress@generic.com
 #PBS -m ae
 
 module load hicexplorer/3.4.3
@@ -14,8 +14,8 @@ while IFS= read -r line
 do
     lines=( $line )
 
-    hicPlotTADs --tracks /srv/scratch/z5160329/OAN_HiC_Ash/Ash_HiC_Scripts/HiC_plotTADs_tracks_Ash.ini \
-    --out /srv/scratch/z5160329/OAN_HiC_Ash/HiCPlotTADs_output/Plot_TADs_hic_and_eigen_"${lines[0]}".pdf \
+    hicPlotTADs --tracks HiC_plotTADs_tracks.ini \
+    --out Plot_TADs_hic_and_eigen_"${lines[0]}".pdf \
     --region chr"${lines[0]}":1-"${lines[1]}" \
     --dpi 300
 
