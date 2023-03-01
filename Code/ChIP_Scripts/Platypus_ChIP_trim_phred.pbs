@@ -4,19 +4,19 @@
 #PBS -l select=1:ncpus=16:mem=20gb
 #PBS -l walltime=3:00:00
 #PBS -j oe
-#PBS -M a.milton@unsw.edu.au
+#PBS -M myemailadress@generic.com
 #PBS -m ae
  
 
 module load trimmomatic/0.38
 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/F_H3K27me3.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/F_H3K27me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/F_H3K9me2.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/F_H3K9me2.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/F_H3K9me3.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/F_H3K9me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/F_H4K20me1.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/F_H4K20me1.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/F_RNA-polII.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/F_RNA-polII.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/M_H3K27me3.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/M_H3K27me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/M_H3K9me2.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/M_H3K9me2.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/M_H3K9me3.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/M_H3K9me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/M_H4K20me1.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/M_H4K20me1.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
-java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 /srv/scratch/waters/OAN_ChIP/ChIP_data/M_RNA-polII.clean.fq.gz /srv/scratch/z5160329/OAN_ChIP_Ash/Trimmed_Reads/M_RNA-polII.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 F_H3K27me3.clean.fq.gz F_H3K27me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 F_H3K9me2.clean.fq.gz F_H3K9me2.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 F_H3K9me3.clean.fq.gz F_H3K9me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 F_H4K20me1.clean.fq.gz F_H4K20me1.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 F_RNA-polII.clean.fq.gz F_RNA-polII.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 M_H3K27me3.clean.fq.gz M_H3K27me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 M_H3K9me2.clean.fq.gz M_H3K9me2.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 M_H3K9me3.clean.fq.gz M_H3K9me3.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 M_H4K20me1.clean.fq.gz M_H4K20me1.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
+java -jar /apps/trimmomatic/0.38/trimmomatic-0.38.jar SE -threads 16 M_RNA-polII.clean.fq.gz M_RNA-polII.clean.trimmed.fq.gz ILLUMINACLIP:TruSeq3-SE:2:30:10 HEADCROP:10 SLIDINGWINDOW:5:15 MINLEN:30 
